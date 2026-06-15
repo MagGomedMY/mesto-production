@@ -6,10 +6,9 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Mesto - Арчаков Магомед</title>
-
-  <script type="module" crossorigin src="./assets/index-D2tB2-pZ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-D2z4Cjqv.css">
+  <title>Mesto</title>
+  <script type="module" crossorigin src="./assets/index-D462bp8F.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DNbS4tJ4.css">
 </head>
 
 <body class="page">
@@ -41,14 +40,23 @@
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="edit-profile" novalidate>
           <label class="popup__label">
-            <input type="text" name="user-name" id="user-name" class="popup__input popup__input_type_name"
-              placeholder="Имя"
-              data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы" />
+            <input type="text" 
+                   name="user-name" 
+                   id="user-name" 
+                   class="popup__input popup__input_type_name"
+                   placeholder="Имя"
+                   pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$"
+                   title="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
+                   required />
             <span class="popup__error" id="user-name-error"></span>
           </label>
           <label class="popup__label">
-            <input type="text" name="user-description" id="user-description"
-              class="popup__input popup__input_type_description" placeholder="Занятие" />
+            <input type="text" 
+                   name="user-description" 
+                   id="user-description"
+                   class="popup__input popup__input_type_description" 
+                   placeholder="Занятие"
+                   required />
             <span class="popup__error" id="user-description-error"></span>
           </label>
           <button type="submit" class="button popup__button popup__button_disabled" disabled>
@@ -64,14 +72,23 @@
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="new-place" novalidate>
           <label class="popup__label">
-            <input type="text" name="place-name" id="place-name" class="popup__input popup__input_type_card-name"
-              placeholder="Название"
-              data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы" />
+            <input type="text" 
+                   name="place-name" 
+                   id="place-name" 
+                   class="popup__input popup__input_type_card-name"
+                   placeholder="Название"
+                   pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$"
+                   title="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
+                   required />
             <span class="popup__error" id="place-name-error"></span>
           </label>
           <label class="popup__label">
-            <input type="url" name="place-link" id="place-link" class="popup__input popup__input_type_url"
-              placeholder="Ссылка на картинку" />
+            <input type="url" 
+                   name="place-link" 
+                   id="place-link" 
+                   class="popup__input popup__input_type_url"
+                   placeholder="Ссылка на картинку"
+                   required />
             <span class="popup__error" id="place-link-error"></span>
           </label>
           <button type="submit" class="button popup__button popup__button_disabled" disabled>
@@ -88,25 +105,29 @@
         <p class="popup__caption"></p>
       </div>
     </div>
+
     <div class="popup popup_type_remove-card">
       <div class="popup__content">
         <button type="button" class="popup__close"></button>
         <h3 class="popup__title">Вы уверены?</h3>
         <form class="popup__form" name="remove-card" novalidate>
-          <button type="submit" class="button popup__button">
-            Да
-          </button>
+          <button type="submit" class="button popup__button">Да</button>
         </form>
       </div>
     </div>
+
     <div class="popup popup_type_edit-avatar">
       <div class="popup__content">
         <button type="button" class="popup__close"></button>
         <h3 class="popup__title">Обновить аватар</h3>
         <form class="popup__form" name="edit-avatar" novalidate>
           <label class="popup__label">
-            <input type="url" name="user-avatar" id="user-avatar" class="popup__input popup__input_type_avatar"
-              placeholder="Ссылка на изображение" />
+            <input type="url" 
+                   name="user-avatar" 
+                   id="user-avatar" 
+                   class="popup__input popup__input_type_avatar"
+                   placeholder="Ссылка на изображение"
+                   required />
             <span class="popup__error" id="user-avatar-error"></span>
           </label>
           <button type="submit" class="button popup__button popup__button_disabled" disabled>
@@ -115,6 +136,7 @@
         </form>
       </div>
     </div>
+
     <div class="popup popup_type_info">
       <div class="popup__content popup__content_content_info">
         <button type="button" class="popup__close"></button>
@@ -125,7 +147,7 @@
       </div>
     </div>
   </div>
-
+
 
   <template id="card-template">
     <li class="places__item card">
@@ -143,6 +165,7 @@
       </div>
     </li>
   </template>
+
   <template id="popup-info-definition-template">
     <div class="popup__info-item">
       <dt class="popup__info-term"></dt>
