@@ -7,7 +7,7 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Mesto</title>
-  <script type="module" crossorigin src="./assets/index-D462bp8F.js"></script>
+  <script type="module" crossorigin src="./assets/index-lEcyzZs8.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-DNbS4tJ4.css">
 </head>
 
@@ -41,22 +41,26 @@
         <form class="popup__form" name="edit-profile" novalidate>
           <label class="popup__label">
             <input type="text" 
-                   name="user-name" 
-                   id="user-name" 
-                   class="popup__input popup__input_type_name"
-                   placeholder="Имя"
-                   pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$"
-                   title="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
-                   required />
+               name="user-name" 
+               id="user-name" 
+               class="popup__input popup__input_type_name"
+               placeholder="Имя"
+               minlength="2"
+               maxlength="40"
+               pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$"
+               title="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы. Длина от 2 до 40 символов"
+               required />
             <span class="popup__error" id="user-name-error"></span>
           </label>
           <label class="popup__label">
             <input type="text" 
-                   name="user-description" 
-                   id="user-description"
-                   class="popup__input popup__input_type_description" 
-                   placeholder="Занятие"
-                   required />
+               name="user-description" 
+               id="user-description"
+               class="popup__input popup__input_type_description" 
+               placeholder="Занятие"
+               minlength="2"
+               maxlength="200"
+               required />
             <span class="popup__error" id="user-description-error"></span>
           </label>
           <button type="submit" class="button popup__button popup__button_disabled" disabled>
@@ -73,13 +77,15 @@
         <form class="popup__form" name="new-place" novalidate>
           <label class="popup__label">
             <input type="text" 
-                   name="place-name" 
-                   id="place-name" 
-                   class="popup__input popup__input_type_card-name"
-                   placeholder="Название"
-                   pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$"
-                   title="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
-                   required />
+               name="place-name" 
+               id="place-name" 
+               class="popup__input popup__input_type_card-name"
+               placeholder="Название"
+               minlength="2"
+               maxlength="30"
+               pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$"
+               title="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы. Длина от 2 до 30 символов"
+               required />
             <span class="popup__error" id="place-name-error"></span>
           </label>
           <label class="popup__label">
